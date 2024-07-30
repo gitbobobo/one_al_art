@@ -1,0 +1,20 @@
+{
+  "name": "one_al_art",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node ./steps/format_convert.js",
+    "one": "node ./steps/one_art.js",
+    "tree": "node ./steps/build_tree.js",
+    "clear": "node ./steps/clear_dir.js"
+  },
+  "keywords": [],
+  "author": "gitbobobo",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "music-metadata": "^10.0.0"
+  }
+}
