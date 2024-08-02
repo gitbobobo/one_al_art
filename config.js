@@ -15,7 +15,7 @@ const losslessFormat = '.flac';
 const lossyFormat = '.mp3';
 
 /// 艺术家分隔符
-const artistSeparators = [';', ',', '/'];
+const artistSeparators = ['/', ';', ','];
 
 /// 检查路径是否存在，不存在则创建
 const checkPath = (path, autoCreate = false) => {

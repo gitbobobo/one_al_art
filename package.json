@@ -7,7 +7,9 @@
     "convert": "node ./steps/format_convert.js",
     "one": "node ./steps/one_art.js",
     "tree": "node ./steps/build_tree.js",
-    "clear": "node ./steps/clear_dir.js"
+    "clear": "node ./steps/clear_dir.js",
+    "cue": "node ./steps/collect_cue.js",
+    "short": "node ./steps/short_dir.js"
   },
   "keywords": [],
   "author": "gitbobobo",

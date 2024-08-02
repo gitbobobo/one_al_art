@@ -9,7 +9,7 @@ import * as musicMeta from 'music-metadata'
 /// 音乐格式转换
 const convertAudio = async (inputFile, outputFormat) => {
     return new Promise(async (resolve, reject) => {
-        if (inputFile.endsWith(outputFormat)) {
+        if (inputFile.endsWith(outputFormat) || inputFile.endsWith('.ape')) {
             console.log('⚠️', '无需转换', inputFile);
             resolve(inputFile);
             return;

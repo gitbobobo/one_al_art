@@ -19,10 +19,10 @@ const moveFile = async (audioFile) => {
         var artist = metadata.common.albumartist ?? metadata.common.artist ?? '[Unknown Artist]'
         artist = artist.replace(/[\\/*<>|]/g, '&');
         // Windows 系统文件夹不能包含.和?
-        artist = artist.replace(/[.?"]/g, '_');
+        artist = artist.replace(/[.?:"]/g, '_').trim();
         var album = metadata.common.album ?? '[Unknown Album]'
         album = album.replace(/[\\/*<>|]/g, '&');
-        album = album.replace(/[.?"]/g, '_');
+        album = album.replace(/[.?:"]/g, '_').trim();
         const destinationFolder = path.join(config.outputPath, artist, album);
         const destinationPath = path.join(destinationFolder, path.basename(audioFile));
         if (audioFile !== destinationPath) {
