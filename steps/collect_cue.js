@@ -23,8 +23,9 @@ const collectCueFolders = (dir, cueFolders) => {
             }
             if (stats.size > minSize && isAudio) {
                 sizeSatisfy = true;
-                // wv 文件内部可能包含分轨信息
-                if (filePath.slice(filePath.lastIndexOf('.')).toLowerCase() === '.wv') {
+                // wv, flac 文件内部可能包含分轨信息
+                const suffix = filePath.slice(filePath.lastIndexOf('.')).toLowerCase()
+                if (suffix === '.wv' || suffix === '.flac') {
                     hasCue = true;
                 }
             } else if (filePath.slice(filePath.lastIndexOf('.')).toLowerCase() === '.cue') {
